@@ -23,7 +23,7 @@ const cartSlice = createSlice({
       state.error = null;
     },
     fetchCartSuccess(state, action: PayloadAction<CartItem[]>) {
-      console.log("carts", action.payload)
+
       state.items = action.payload;
       state.loading = false;
       state.error = null;
@@ -53,7 +53,7 @@ const cartSlice = createSlice({
       state.error = null;
     },
      removeFromCartSuccess(state, action: PayloadAction<number>) {
-        console.log("action.payload",action.payload,state.items)
+
     const idToRemove = action.payload;
     // Filter out the removed item from the cart items
     state.items = state.items.filter(item => item.id !== idToRemove);

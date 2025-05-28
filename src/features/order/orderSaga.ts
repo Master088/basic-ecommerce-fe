@@ -64,8 +64,6 @@ function* handleCreateOrder(action: PayloadAction<PlaceOrder>) {
 function* handleUpdateOrder(action: PayloadAction<UpdateOrderPayload>) {
   try {
     const order: Order = yield call(orderAPI.updateStatus, action.payload.id, { status: action.payload.status });
-
-    console.log("order", order)
     yield put(updateOrderSuccess(order));
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {

@@ -70,7 +70,7 @@ const orderSlice = createSlice({
       state.error = undefined;
     },
 updateOrderSuccess(state, action: PayloadAction<Order>) {
-  console.log( "here ",action.payload.id, action.payload.status)
+
   const index = state.orders.findIndex(o => o.id === action.payload.id);
   if (index !== -1) {
     // Only update the status of the existing order

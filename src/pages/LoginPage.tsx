@@ -14,8 +14,8 @@ export default function LoginPage() {
   const { error, token } = useAppSelector((state) => state.auth);
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("duatin08@gmail.com");
-  const [password, setPassword] = useState("supersecurepassword");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

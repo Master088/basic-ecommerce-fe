@@ -105,7 +105,6 @@ export default function ProductsPage() {
   const handleDelete = () => {
     if (deleteProductId !== null) {
       // Dispatch delete action here
-      console.log("Delete product with id:", deleteProductId);
       dispatch(deleteProductRequest(deleteProductId));
 
       // TODO: dispatch(deleteProductRequest(deleteProductId));

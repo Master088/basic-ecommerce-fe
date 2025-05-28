@@ -5,7 +5,7 @@ import { useAppSelector } from '../app/hooks';
 
 const ProtectedRoute: React.FC = () => {
   const token = useAppSelector((state) => state.auth.token);
-  console.log("token", token)
+
   return token ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
